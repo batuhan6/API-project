@@ -1,0 +1,5 @@
+django
+djangorestframework
+djoser
+djangorestframework_simplejwt
+python-decouple
