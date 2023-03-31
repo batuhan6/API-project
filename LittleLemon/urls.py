@@ -19,5 +19,4 @@ from django.urls import path, include
 urlpatterns = [
     path('batu-admin/', admin.site.urls),
     path('api/', include("LittleLemon.urls_api")),
-    path('token/', include("users.urls_user")),
 ]

@@ -151,7 +151,10 @@ REST_FRAMEWORK = {
         'anon': '5/minute',
         'user': '2/minute',
         'five': '5/minute'
-    }
+    },
+    'DEFAULT_PERMISSION_CLASSES':(
+        'rest_framework.permissions.IsAuthenticated',
+    )
 }
 
 DJOSER = {
@@ -159,6 +162,6 @@ DJOSER = {
 }
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=180),
 }
 
