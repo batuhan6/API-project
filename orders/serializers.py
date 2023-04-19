@@ -2,31 +2,31 @@ from rest_framework import serializers
 from orders.models import Order, OrderItem
 
 
-class OrderListSerializer(serializers.ModelSerializer):
+class OrderItemListSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Order
+        model = OrderItem
         fields = "__all__"
 
 
-class OrderDetailSerializer(serializers.ModelSerializer):
+class OrderItemDetailSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Order
+        model = OrderItem
         fields = "__all__"
 
 
-class OrderCreateSerializer(serializers.ModelSerializer):
+class OrderItemCreateSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Order
+        model = OrderItem
         fields = "__all__"
 
 
-class OrderUpdateSerializer(serializers.ModelSerializer):
+class OrderItemUpdateSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Order
+        model = OrderItem
         fields = "__all__"
 
 
-class OrderDeleteSerializer(serializers.ModelSerializer):
+class OrderItemDeleteSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Order
+        model = OrderItem
         fields = "__all__"
