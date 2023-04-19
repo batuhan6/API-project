@@ -23,12 +23,15 @@ class MenuItem(models.Model):
 class Cart(models.Model):
     user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     menu_item = models.ForeignKey(MenuItem, on_delete=models.CASCADE)
-    quantity = models.SmallIntegerField(),
+    quantity = models.SmallIntegerField()
     unit_price = models.DecimalField(max_digits=6, decimal_places=2)
     price = models.DecimalField(max_digits=6, decimal_places=2)
 
     class Meta:
         unique_together = ('menu_item', 'user')
+        permissions = [
+            ("show_cart", "Can show the cart"),
+        ]
 
     def __str__(self) -> str:
         return str(self.quantity)

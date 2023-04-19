@@ -8,7 +8,7 @@ from menus import models
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ('id', 'title', 'slug')
     search_fields = ('title__icontains',)
-    search_help_text = (_('title alanına göre arama yapılabilir'))
+    search_help_text = (_('title alanına göre arama yapılabilir'),)
     ordering = ('title',)
 
 

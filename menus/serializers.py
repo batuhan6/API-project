@@ -31,3 +31,21 @@ class MenuItemDeleteSerializer(serializers.ModelSerializer):
     class Meta:
         model = MenuItem
         fields = "__all__"
+
+
+class CartListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MenuItem
+        fields = "__all__"
+
+
+class CartCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MenuItem
+        fields = "__all__"
+
+
+class CartDeleteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MenuItem
+        fields = "__all__"
