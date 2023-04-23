@@ -10,6 +10,23 @@ class Category(models.Model):
         return str(self.title)
 
 
+class Cart(models.Model):
+    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    # menu_item = models.ForeignKey(MenuItem, on_delete=models.CASCADE)
+    quantity = models.SmallIntegerField()
+    unit_price = models.DecimalField(max_digits=6, decimal_places=2)
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+
+    class Meta:
+        #unique_together = ('menu_item', 'user')
+        permissions = [
+            ("show_cart", "Can show the cart"),
+        ]
+
+    def __str__(self) -> str:
+        return str(self.quantity)
+
+
 class MenuItem(models.Model):
     title = models.CharField(max_length=255, db_index=True)
     price = models.DecimalField(max_digits=6, decimal_places=2, db_index=True)
@@ -20,18 +37,6 @@ class MenuItem(models.Model):
         return str(self.title)
 
 
-class Cart(models.Model):
-    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
-    menu_item = models.ForeignKey(MenuItem, on_delete=models.CASCADE)
-    quantity = models.SmallIntegerField()
-    unit_price = models.DecimalField(max_digits=6, decimal_places=2)
-    price = models.DecimalField(max_digits=6, decimal_places=2)
-
-    class Meta:
-        unique_together = ('menu_item', 'user')
-        permissions = [
-            ("show_cart", "Can show the cart"),
-        ]
-
-    def __str__(self) -> str:
-        return str(self.quantity)
+class CartMenuItem(models.Model):
+    cart = models.ForeignKey(Cart, on_delete=models.PROTECT, related_name='cart_items')
+    menu_item = models.ForeignKey(MenuItem, on_delete=models.PROTECT, related_name='carts')

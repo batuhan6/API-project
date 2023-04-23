@@ -25,3 +25,8 @@ class MenuItemAdmin(admin.ModelAdmin):
 class CartAdmin(admin.ModelAdmin):
     list_display = ('id', 'user', 'quantity', 'unit_price', 'price')
     ordering = ('id',)
+
+
+@admin.register(models.CartMenuItem)
+class CartMenuItemAdmin(admin.ModelAdmin):
+    list_display = ('id', )
