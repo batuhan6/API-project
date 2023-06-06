@@ -33,10 +33,23 @@ class MenuItemDeleteSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
+class CartMenuItemListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CartMenuItem
+        fields = "__all__"
+
+
 class CartListSerializer(serializers.ModelSerializer):
+    items = serializers.SerializerMethodField()
+
     class Meta:
         model = Cart
         fields = "__all__"
+
+    def get_items(self, obj):
+        cart_items = obj.cart_items.all()
+        serializer = CartMenuItemListSerializer(cart_items, many=True)
+        return serializer.data
 
 
 class CartMenuItemDetailSerializer(serializers.ModelSerializer):

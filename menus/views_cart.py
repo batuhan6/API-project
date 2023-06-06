@@ -13,7 +13,7 @@ class CartListOrCreateAPIViewSet(viewsets.ModelViewSet):
     list_serializer_class = serializers.CartListSerializer
     create_serializer_class = serializers.CartCreateSerializer
     permission_classes = [UserPermission]
-    perm_slug = ""
+    perm_slug = "menus.cart"
 
     def list(self, request, *args, **kwargs):
         try:
@@ -22,8 +22,11 @@ class CartListOrCreateAPIViewSet(viewsets.ModelViewSet):
                 return Response(serializer.data)
             return Response(status=status.HTTP_403_FORBIDDEN)
         except AttributeError:
-            serializer = self.list_serializer_class(self.queryset, many=True)
-            return Response(serializer.data)
+            return super().list(request, *args, **kwargs)
+
+    def get_queryset(self):
+        queryset = self.queryset.get(user=self.request.user)
+        return queryset
 
     def create(self, request, *args, **kwargs):
         try:
@@ -44,7 +47,8 @@ class CartRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Cart.objects.all()
     serializer_class = serializers.CartDeleteSerializer
     perm_slug = "menus.cart"
-    #permission_classes = [UserPermission]
+
+    # permission_classes = [UserPermission]
 
     def retrieve(self, request, *args, **kwargs):
         try:
@@ -54,6 +58,3 @@ class CartRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
             queryset = self.queryset.first()
             serializer = serializers.CartDetailSerializer(queryset)
             return Response(serializer.data)
-
-
-

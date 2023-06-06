@@ -29,4 +29,4 @@ class CartAdmin(admin.ModelAdmin):
 
 @admin.register(models.CartMenuItem)
 class CartMenuItemAdmin(admin.ModelAdmin):
-    list_display = ('id', )
+    list_display = ('id', 'cart')

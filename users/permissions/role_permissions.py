@@ -10,6 +10,6 @@ class RolePermission(BasePermission):
             else:
                 return False
         except AttributeError:
-            return False
+            return True
 
 

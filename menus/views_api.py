@@ -21,6 +21,7 @@ class MenuItemListOrCreateAPIViewSet(viewsets.ModelViewSet):
                 return Response(serializer.data)
             return Response(status=status.HTTP_403_FORBIDDEN)
         except AttributeError:
+            #Customer ise buraya girecek
             serializer = self.list_serializer_class(self.queryset, many=True)
             return Response(serializer.data)
 

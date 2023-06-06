@@ -10,7 +10,6 @@ from users.permissions.user_permissions import UserPermission
 class ManagerListOrCreateAPIViewSet(viewsets.ModelViewSet):
     queryset = get_user_model().objects.all()
     serializer_class = serializers_user.UserListSerializer
-    list_serializer_class = serializers_user.UserListSerializer
     create_serializer_class = serializers_user.UserCreateSerializer
     permission_classes = [UserPermission]
     perm_slug = "users.customuser"
@@ -18,10 +17,10 @@ class ManagerListOrCreateAPIViewSet(viewsets.ModelViewSet):
     def list(self, request, *args, **kwargs):
         try:
             if request.user.role.slug in ["manager"]:
-                serializer = self.list_serializer_class(self.queryset, many=True)
+                serializer = self.serializer_class(self.queryset, many=True)
                 return Response(serializer.data)
         except AttributeError:
-            serializer = self.list_serializer_class(self.queryset, many=True)
+            serializer = self.serializer_class(self.queryset, many=True)
             return Response(serializer.data)
 
     def create(self, request, *args, **kwargs):
