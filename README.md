@@ -34,3 +34,7 @@ In this project, I have proven my ability to:
 <!--
 <img src="https://github.com/batuhan6/API-project/assets/32600613/42455ebb-122d-4570-b9c1-4a49c3dc1b3b" width=800 >
 -->
+<pre>
+  With delivery crew role I am not authorized to access menu-items list.
+</pre>
+
