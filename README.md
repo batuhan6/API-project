@@ -24,6 +24,7 @@ In this project, I have proven my ability to:
 
 <br />
 With manager role I have right to access menu items list.
+
 <br />
 
 ![api1](https://github.com/batuhan6/API-project/assets/32600613/42455ebb-122d-4570-b9c1-4a49c3dc1b3b)
