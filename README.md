@@ -22,9 +22,7 @@ In this project, I have proven my ability to:
 * Testing and debugging. Used Postman tool to test endpoints.
 
 
-
-
-
+<br />
 With manager role I have right to access menu items list.
 
 
