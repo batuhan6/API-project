@@ -2,6 +2,10 @@
 
 API programming is integral to modern software development, serving as the linchpin for seamless communication between diverse applications and enabling modularity, scalability, and cross-platform compatibility. Its significance lies in facilitating third-party integrations, saving development time through reuse, fostering innovation and collaboration, and contributing to the growth of interconnected software ecosystems. APIs are vital for mobile app development, data access, and integration, providing a standardized approach to securely access and transmit information. Overall, API programming plays a pivotal role in creating efficient, scalable, and interconnected software systems that power the digital landscape.
 
+
+Created database tabels using django models. 
+
+
 I have used the following tools, sofware and framework
 
 * Git
