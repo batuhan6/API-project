@@ -12,6 +12,7 @@ I have used the following tools, sofware and framework
 * Python
 * Django
 * PostgreSQL
+* Postman(API testing and debugging tool)
 
 In this project, I have proven my ability to:
 
@@ -19,6 +20,9 @@ In this project, I have proven my ability to:
 * Create endpoints
 * Created API authentications using OAuth tokens
 * Testing and debugging. Used Postman tool to test endpoints.
+
+
+  With manager role I have right to access menu items list.
 
 
 ![api1](https://github.com/batuhan6/API-project/assets/32600613/42455ebb-122d-4570-b9c1-4a49c3dc1b3b)
