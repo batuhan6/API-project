@@ -18,4 +18,7 @@ In this project, I have proven my ability to:
 * Create RESTful APIs and use standard HTTP methods (GET, POST, PUT, DELETE)
 * Create endpoints
 * Created API authentications using OAuth tokens
-* Testing and debugging. Used Postman tool to test endpoints. 
+* Testing and debugging. Used Postman tool to test endpoints.
+
+
+![api1](https://github.com/batuhan6/API-project/assets/32600613/42455ebb-122d-4570-b9c1-4a49c3dc1b3b)
