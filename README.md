@@ -1,7 +1,9 @@
-# API-project
-
+## Importance of API programming 
 API programming is integral to modern software development, serving as the linchpin for seamless communication between diverse applications and enabling modularity, scalability, and cross-platform compatibility. Its significance lies in facilitating third-party integrations, saving development time through reuse, fostering innovation and collaboration, and contributing to the growth of interconnected software ecosystems. APIs are vital for mobile app development, data access, and integration, providing a standardized approach to securely access and transmit information. Overall, API programming plays a pivotal role in creating efficient, scalable, and interconnected software systems that power the digital landscape.
 
+# API-project
+
+I created a fully functioning API project for the Little Lemon restaurant so that the client application developers can use the APIs to develop web and mobile applications. People with different roles will be able to browse, add and edit menu items, place orders, browse orders, assign delivery crew to orders and finally deliver the orders. 
 
 Created database tabels using django models. 
 
