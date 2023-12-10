@@ -64,12 +64,12 @@ Error messages with appropriate HTTP status codes for specific errors is being d
 ![api2](https://github.com/batuhan6/API-project/assets/32600613/c0b717e4-e77c-416c-b782-d0581d7d20b1)
 
 <pre>
-  Due to not having delivery crew member with id number 11 it turns back HTTP status code 500 internal server error.
+  Due to not having delivery crew member with id number 20 it turns back HTTP status code 404 Not found.
 </pre>
 ![api4](https://github.com/batuhan6/API-project/assets/32600613/8e8a226f-b744-4055-8109-2e4adc4aed75)
 
 <pre>
- I added a delivery a delivery crew member now it deletes successfully turning status code 204 No content.
+ It deletes successfully delivery crew member with id 11 and turning status code 204 No content.
 </pre>
  ![api5](https://github.com/batuhan6/API-project/assets/32600613/64f207cb-26b3-4656-a140-0d200ae203db)
 
