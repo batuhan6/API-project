@@ -66,15 +66,17 @@ Error messages with appropriate HTTP status codes for specific errors is being d
 <pre>
   a
 </pre>
+![api4](https://github.com/batuhan6/API-project/assets/32600613/8e8a226f-b744-4055-8109-2e4adc4aed75)
 
 <pre>
  a
 </pre>
+ ![api5](https://github.com/batuhan6/API-project/assets/32600613/64f207cb-26b3-4656-a140-0d200ae203db)
 
 <pre>
   a
 </pre>
-
+  ![api6](https://github.com/batuhan6/API-project/assets/32600613/459974dc-479a-4b14-a2c9-d380547725fb)
 
 
 
