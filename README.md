@@ -38,6 +38,8 @@ Users not assigned to a group will be considered customers.
 ### Error check and proper status codes
 Error messages with appropriate HTTP status codes for specific errors is being displayed. These include when someone requests a non-existing item, makes unauthorized API requests, or sends invalid data in a POST, PUT or PATCH request. 
 
+<br />
+
 <pre>
   Tokens created successfully
 </pre>
