@@ -62,3 +62,21 @@ Error messages with appropriate HTTP status codes for specific errors is being d
 </pre>
 
 ![api2](https://github.com/batuhan6/API-project/assets/32600613/c0b717e4-e77c-416c-b782-d0581d7d20b1)
+
+<pre>
+  a
+</pre>
+
+<pre>
+ a
+</pre>
+
+<pre>
+  a
+</pre>
+
+
+
+
+
+
