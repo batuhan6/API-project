@@ -66,7 +66,8 @@ Error messages with appropriate HTTP status codes for specific errors is being d
 <pre>
   Due to not having delivery crew member with id number 20 it turns back HTTP status code 404 Not found.
 </pre>
-![api4](https://github.com/batuhan6/API-project/assets/32600613/8e8a226f-b744-4055-8109-2e4adc4aed75)
+![api7](https://github.com/batuhan6/API-project/assets/32600613/994c0ed8-0745-464b-8104-25b59f3d221a)
+
 
 <pre>
  It deletes successfully delivery crew member with id 11 and turning status code 204 No content.
@@ -74,7 +75,7 @@ Error messages with appropriate HTTP status codes for specific errors is being d
  ![api5](https://github.com/batuhan6/API-project/assets/32600613/64f207cb-26b3-4656-a140-0d200ae203db)
 
 <pre>
-  Successfully added new menu item with POST method 
+  Successfully added new menu item with POST method. 
 </pre>
   ![api6](https://github.com/batuhan6/API-project/assets/32600613/459974dc-479a-4b14-a2c9-d380547725fb)
 
