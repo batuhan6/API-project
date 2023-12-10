@@ -23,6 +23,11 @@ In this project, I have proven my ability to:
 
 <br />
 
+<pre>
+  Tokens created successfully
+</pre>
+
+
 
 <pre>
   With manager role I have right to access menu-items list.
