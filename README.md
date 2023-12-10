@@ -23,6 +23,18 @@ In this project, I have proven my ability to:
 
 <br />
 
+User groups
+
+Two user groups are created and random user random users are assigned from the Django admin panel. 
+
+Manager
+
+Delivery crew
+
+Users not assigned to a group will be considered customers.
+
+<br />
+
 <pre>
   Tokens created successfully
 </pre>
