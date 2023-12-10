@@ -23,9 +23,9 @@ In this project, I have proven my ability to:
 
 <br />
 
-User groups
+### User groups
 
-Two user groups are created and random user random users are assigned from the Django admin panel. 
+Two user groups are created and random users are assigned from the Django admin panel. 
 
 Manager
 
