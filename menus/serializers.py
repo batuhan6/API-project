@@ -41,6 +41,7 @@ class CartMenuItemListSerializer(serializers.ModelSerializer):
 
 class CartListSerializer(serializers.ModelSerializer):
     items = serializers.SerializerMethodField()
+    user = serializers.StringRelatedField()
 
     class Meta:
         model = Cart

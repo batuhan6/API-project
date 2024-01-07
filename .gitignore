@@ -52,3 +52,5 @@ users/migrations/0*_*.py
 orders/migrations/0*_*.py
 menus/migrations/0*_*.py
 *.sqlite3
+users.txt
+orders/order_backup.py

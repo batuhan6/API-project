@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 from datetime import timedelta
 from pathlib import Path
-
 from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -169,9 +168,18 @@ SIMPLE_JWT = {
 }
 
 SPECTACULAR_SETTINGS = {
-    'TITLE': 'Your Project API',
-    'DESCRIPTION': 'Your project description',
+    'TITLE': 'LittleLemon',
+    'DESCRIPTION': 'LittleLemon menu API project with different job roles',
     'VERSION': '1.0.0',
-    'SERVE_INCLUDE_SCHEMA': False,
-    # OTHER SETTINGS
-}
+    #'SERVE_INCLUDE_SCHEMA': False,
+
+    # Security
+    'SERVE_PUBLIC': True,
+
+    "SWAGGER_UI_SETTINGS": {
+        'filter': True,
+        "persistAuthorization": True,  # remember me
+        "oauth2RedirectUrl": "http://127.0.0.1:8000"
+    },
+
+    }

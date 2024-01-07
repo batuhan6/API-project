@@ -1,20 +1,26 @@
+from drf_spectacular.utils import extend_schema
 from rest_framework import generics, viewsets, status
 from rest_framework.exceptions import APIException
 from rest_framework.response import Response
-
+from django.utils.translation import gettext_lazy as _
 from menus.models import Cart
 from menus import serializers
-from users.permissions.role_permissions import RolePermission
 from users.permissions.user_permissions import UserPermission
 
 
 class CartListOrCreateAPIViewSet(viewsets.ModelViewSet):
     queryset = Cart.objects.all()
+    serializer_class = serializers.CartListSerializer
     list_serializer_class = serializers.CartListSerializer
     create_serializer_class = serializers.CartCreateSerializer
     permission_classes = [UserPermission]
     perm_slug = "menus.cart"
 
+    @extend_schema(
+        description=_(f"""List Carts """),
+        request=serializers.CartListSerializer,
+        responses=serializers.CartListSerializer,
+    )
     def list(self, request, *args, **kwargs):
         try:
             if request.user.role.slug in [""]:
@@ -25,7 +31,7 @@ class CartListOrCreateAPIViewSet(viewsets.ModelViewSet):
             return super().list(request, *args, **kwargs)
 
     def get_queryset(self):
-        queryset = self.queryset.get(user=self.request.user)
+        queryset = self.queryset.filter(user=self.request.user)
         return queryset
 
     def create(self, request, *args, **kwargs):
@@ -47,8 +53,6 @@ class CartRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Cart.objects.all()
     serializer_class = serializers.CartDeleteSerializer
     perm_slug = "menus.cart"
-
-    # permission_classes = [UserPermission]
 
     def retrieve(self, request, *args, **kwargs):
         try:
