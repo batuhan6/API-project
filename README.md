@@ -10,7 +10,7 @@ I have used the following tools, sofware and framework
 * Git
 * Python
 * Django
-* PostgreSQL
+* SQLite
 * Postman(API testing and debugging tool)
 
 In this project, I have proven my ability to:
@@ -34,6 +34,11 @@ Delivery crew
 Users not assigned to a group will be considered customers.
 
 <br />
+
+API urls displayed using swagger
+
+![swagger](https://github.com/batuhan6/API-project/assets/32600613/977ce82d-ed1e-4aaf-8d3a-bfaca4b59121)
+
 
 ### Error check and proper status codes
 Error messages with appropriate HTTP status codes for specific errors is being displayed. These include when someone requests a non-existing item, makes unauthorized API requests, or sends invalid data in a POST, PUT or PATCH request. 
