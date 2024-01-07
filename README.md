@@ -35,8 +35,10 @@ Users not assigned to a group will be considered customers.
 
 <br />
 
+<pre>
 API urls displayed using swagger
-
+</pre>
+  
 ![swagger](https://github.com/batuhan6/API-project/assets/32600613/977ce82d-ed1e-4aaf-8d3a-bfaca4b59121)
 
 
