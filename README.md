@@ -1,45 +1,83 @@
-**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**
+# Importance of API programming 
+API programming is integral to modern software development, serving as the linchpin for seamless communication between diverse applications and enabling modularity, scalability, and cross-platform compatibility. Its significance lies in facilitating third-party integrations, saving development time through reuse, fostering innovation and collaboration, and contributing to the growth of interconnected software ecosystems. APIs are vital for mobile app development, data access, and integration, providing a standardized approach to securely access and transmit information. Overall, API programming plays a pivotal role in creating efficient, scalable, and interconnected software systems that power the digital landscape.
 
-When you're done, you can delete the content in this README and update the file with details for others getting started with your repository.
+# API-project
 
-*We recommend that you open this README in another tab as you perform the tasks below. You can [watch our video](https://youtu.be/0ocf7u76WSo) for a full demo of all the steps in this tutorial. Open the video in a new tab to avoid leaving Bitbucket.*
+I created a fully functioning API project for the Little Lemon restaurant so that the client application developers can use the APIs to develop web and mobile applications. People with different roles will be able to browse, add and edit menu items, place orders, browse orders, assign delivery crew to orders and finally deliver the orders. 
 
----
+I have used the following tools, sofware and framework
 
-## Edit a file
+* Git
+* Python
+* Django
+* PostgreSQL
+* Postman(API testing and debugging tool)
 
-You’ll start by editing this README file to learn how to edit a file in Bitbucket.
+In this project, I have proven my ability to:
 
-1. Click **Source** on the left side.
-2. Click the README.md link from the list of files.
-3. Click the **Edit** button.
-4. Delete the following text: *Delete this line to make a change to the README from Bitbucket.*
-5. After making your change, click **Commit** and then **Commit** again in the dialog. The commit page will open and you’ll see the change you just made.
-6. Go back to the **Source** page.
+* Create RESTful APIs and use standard HTTP methods (GET, POST, PUT, DELETE)
+* Create endpoints
+* Created API authentications using OAuth tokens
+* Testing and debugging. Used Postman tool to test endpoints.
 
----
 
-## Create a file
+<br />
 
-Next, you’ll add a new file to this repository.
+### User groups
 
-1. Click the **New file** button at the top of the **Source** page.
-2. Give the file a filename of **contributors.txt**.
-3. Enter your name in the empty file space.
-4. Click **Commit** and then **Commit** again in the dialog.
-5. Go back to the **Source** page.
+Two user groups are created and random users are assigned from the Django admin panel. 
 
-Before you move on, go ahead and explore the repository. You've already seen the **Source** page, but check out the **Commits**, **Branches**, and **Settings** pages.
+Manager
 
----
+Delivery crew
 
-## Clone a repository
+Users not assigned to a group will be considered customers.
 
-Use these steps to clone from SourceTree, our client for using the repository command-line free. Cloning allows you to work on your files locally. If you don't yet have SourceTree, [download and install first](https://www.sourcetreeapp.com/). If you prefer to clone from the command line, see [Clone a repository](https://confluence.atlassian.com/x/4whODQ).
+<br />
 
-1. You’ll see the clone button under the **Source** heading. Click that button.
-2. Now click **Check out in SourceTree**. You may need to create a SourceTree account or log in.
-3. When you see the **Clone New** dialog in SourceTree, update the destination path and name if you’d like to and then click **Clone**.
-4. Open the directory you just created to see your repository’s files.
+### Error check and proper status codes
+Error messages with appropriate HTTP status codes for specific errors is being displayed. These include when someone requests a non-existing item, makes unauthorized API requests, or sends invalid data in a POST, PUT or PATCH request. 
 
-Now that you're more familiar with your Bitbucket repository, go ahead and add a new file locally. You can [push your change back to Bitbucket with SourceTree](https://confluence.atlassian.com/x/iqyBMg), or you can [add, commit,](https://confluence.atlassian.com/x/8QhODQ) and [push from the command line](https://confluence.atlassian.com/x/NQ0zDQ).
+<br />
+
+<pre>
+  Tokens created successfully
+</pre>
+
+![api3](https://github.com/batuhan6/API-project/assets/32600613/013d1e2f-a424-4e6a-92a5-3f46dd867b5d)
+
+
+
+<pre>
+  With manager role I have right to access menu-items list.
+</pre>
+
+![api1](https://github.com/batuhan6/API-project/assets/32600613/42455ebb-122d-4570-b9c1-4a49c3dc1b3b)
+
+<!--
+<img src="https://github.com/batuhan6/API-project/assets/32600613/42455ebb-122d-4570-b9c1-4a49c3dc1b3b" width=800 >
+-->
+<pre>
+  With delivery crew role I am not authorized to access menu-items list.
+</pre>
+
+![api2](https://github.com/batuhan6/API-project/assets/32600613/c0b717e4-e77c-416c-b782-d0581d7d20b1)
+
+<pre>
+  Due to not having delivery crew member with id number 20 it turns back HTTP status code 404 Not found.
+</pre>
+![api7](https://github.com/batuhan6/API-project/assets/32600613/994c0ed8-0745-464b-8104-25b59f3d221a)
+
+
+<pre>
+ It deletes successfully delivery crew member with id 11 and turning status code 204 No content.
+</pre>
+ ![api5](https://github.com/batuhan6/API-project/assets/32600613/64f207cb-26b3-4656-a140-0d200ae203db)
+
+<pre>
+  Successfully added new menu item with POST method. 
+</pre>
+  ![api6](https://github.com/batuhan6/API-project/assets/32600613/459974dc-479a-4b14-a2c9-d380547725fb)
+
+
+
